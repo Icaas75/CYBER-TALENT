@@ -1,4 +1,4 @@
-  Week1_Day-2
+Week1_Day-2
 
 1. What is Networking?
 
@@ -12,39 +12,42 @@ Examples:
 ---
 
 2. IP Address (Internet Protocol)
+
 An IP address is a unique identifier assigned to each device on a network.
 
 Example:
-        10.201.206.203
-        192.168.1.1
 
-        Commands to Check IP
-ip a        # show your IP address
-ip route    # show gateway (router)
+    10.201.206.203
+    192.168.1.1
+
+  Commands to Check IP
+  
+    ip a        # show your IP address
+    ip route    # show gateway (router)
 
 
-        3. IP Classes (A, B, C)
+3. IP Classes (A, B, C)
 IP addresses are divided into classes based on network size.
 
  Class A
-* Range: `1.0.0.0 – 126.255.255.255`
-* Default subnet: `/8`
-* Large networks (big organizations)
+  * Range: `1.0.0.0 – 126.255.255.255`
+  * Default subnet: `/8`
+  * Large networks (big organizations)
 
  Class B
 
-* Range: `128.0.0.0 – 191.255.255.255`
-* Default subnet: `/16`
-* Medium networks
+  * Range: `128.0.0.0 – 191.255.255.255`
+  * Default subnet: `/16`
+  * Medium networks
 
  Class C
-* Range: `192.0.0.0 – 223.255.255.255`
-* Default subnet: `/24`
-* Small networks (most common)
+  * Range: `192.0.0.0 – 223.255.255.255`
+  * Default subnet: `/24`
+  * Small networks (most common)
 
 Example:
-10.201.206.203 → Class A
-192.168.1.1   → Class C
+    10.201.206.203 → Class A
+    192.168.1.1   → Class C
 
 
         5. OSI Model (7 Layers)
