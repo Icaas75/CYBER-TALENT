@@ -48,7 +48,8 @@ A comprehensive security assessment was conducted against the VulnCorp internal 
 *   **Exploitation Summary:** Injecting an `{% include ... %}` directive forced the local template renderer to fetch and output local files directly into the web application UI view.
 *   **Captured Flag:**
     5.  `FLAG{5st1_t3mpl4t3_1nj3ct10n_rce}` (Exfiltrated by forcing template rendering of local text records)
-    <img width="872" height="247" alt="pri-exc5(broken-access-control)" src="https://github.com/user-attachments/assets/f9c06139-7955-47bd-95bf-e1247283da41" />
+    <img width="609" height="445" alt="pri-exc7(ssti)" src="https://github.com/user-attachments/assets/d28f3bef-0502-4ba6-894e-a8705a81c861" />
+
 
 
 ### 🕵️‍♂️ Phase 5: Client-Side Session Hijacking
@@ -57,7 +58,8 @@ A comprehensive security assessment was conducted against the VulnCorp internal 
 *   **Exploitation Summary:** A malicious JavaScript snippet was submitted via the feedback forum. When an automated administrator review script loaded the review interface, the script executed, sending the session cookie out-of-band to an external Webhook handler.
 *   **Captured Flag:**
     6.  `FLAG{x55_st0r3d_c00k13_st0l3n}` (Hijacked directly from the incoming admin request parameter stream)
-    <img width="586" height="230" alt="pri-exc6(horizontal)" src="https://github.com/user-attachments/assets/e2e7bbf2-3b60-4310-87b7-2d7165aaa510" />
+    <img width="726" height="224" alt="pri-exc4(admin-cookie)" src="https://github.com/user-attachments/assets/5026bdf5-7c95-48b4-9fea-2c01e8891b17" />
+
 
 
 ### 📤 Phase 6: Unrestricted File Upload & Remote Code Execution (RCE)
@@ -66,10 +68,7 @@ A comprehensive security assessment was conducted against the VulnCorp internal 
 *   **Exploitation Summary:** The upload request was intercepted via a local proxy, swapping out allowed text extensions with a functional arbitrary script handler (`burk.php`). Accessing the file directly provided programmatic control over the operating system layer.
 *   **Captured Flags:**
     7.  **Web Shell Upload Access Flag** (Awarded upon bypassing backend upload blocks)
-    <img width="609" height="445" alt="pri-exc7(ssti)" src="https://github.com/user-attachments/assets/708cb579-f1c5-4733-bf6d-92bb0d2a7612" />
-
-    8.  **Nmap Infrastructure Identification Validation** (Awarded upon running service detection mapping across the infrastructure interface)
-       <img width="891" height="379" alt="pri-exc8(file_upload)" src="https://github.com/user-attachments/assets/094b8c25-2a6f-4738-ac6e-59376cadd6c5" />
+    <img width="891" height="379" alt="pri-exc8(file_upload)" src="https://github.com/user-attachments/assets/a7a9d828-225b-4603-a7b0-e99a675b2357" />
 
 
 ---
